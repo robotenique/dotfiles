@@ -1,3 +1,4 @@
+
 #
 # Executes commands at the start of an interactive session.
 #
@@ -15,24 +16,30 @@ prompt_zsh_showStatus () {
     if [ "$tLen" -gt "30" ]; then
     short=${track:0:30}"(...)\""
 	fi
-    echo -n "%{$color%}\uf1bc%{%F{194}%} $artist - $short ";
+    echo -n "%{%F{black}%}\ue0b2%{$bg[black]%}%F{194}%}%{$color%} \uf1bc%{%F{194}%} $artist - $short ";
   fi
 }
 
+prompt_zsh_debianIcon () {
+	echo -n "%F{224}%}\uf302"
+}
 #POWERLINE
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_OS_ICON_FOREGROUND="224"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda os_icon dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time zsh_showStatus)
 POWERLEVEL9K_TIME_FORMAT=" %D{\uf017 %H:%M}"
-POWERLEVEL9K_TIME_BACKGROUND="16"
+POWERLEVEL9K_TIME_BACKGROUND="88"
 POWERLEVEL9K_TIME_FOREGROUND="191"
-POWERLEVEL9K_ANACONDA_LEFT_DELIMITER="%{%F{20}%}▸%{%F{0}%}"
-POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER="%{%F{20}%}◂"
+POWERLEVEL9K_LINUX_ICON="\uf302"
+
+# 'anaconda and python info'
 POWERLEVEL9K_ANACONDA_BACKGROUND="11"
 POWERLEVEL9K_ANACONDA_FOREGROUND="0"
-POWERLEVEL9K_PYTHON_ICON="%{%F{20}%}\uf201 "
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
+POWERLEVEL9K_PYTHON_ICON="%{%F{20}%}\ue606 "
+
 
 # 'dir colors'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='91'
@@ -51,10 +58,10 @@ POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='232'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='167'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='232'
 
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="\uE0B0"
 
 
 
-#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="%B%F{1}❯%F{3}❯%F{2}❯%f%b"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -64,8 +71,8 @@ fi
 source ~/.zprezto/modules/per-directory-history/per-directory-history.plugin.zsh
 export TERM="xterm-256color"
 export SUBLIME=subl
-export EDITOR="$SUBLIME --wait"
-export VISUAL=$EDITOR
+export EDITOR="emacs"
+export VISUAL="emacs"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/juliano/bin:/home/juliano/.intellij/bin"
 export PATH="/home/juliano/anaconda3/bin:$PATH"
@@ -79,9 +86,11 @@ alias touchh="sudo modprobe -r psmouse && sudo modprobe psmouse proto=imps"
 alias sshime="ssh robotenique@linux.ime.usp.br"
 alias sshlin="ssh robotenique@python"
 alias shreload="source ~/.zshrc"
+alias reltmp="source ~/.ztemp"
 alias opn="nautilus /opt/lampp/htdocs"
 alias ilinux="cat /etc/*-release"
 alias c='tput reset'
+alias gcl='git clone'
 alias gpublic='git push public'
 alias glpublic='git pull --allow-unrelated-histories public master'
 alias activate='source activate robotenique'
@@ -96,7 +105,6 @@ alias gc="git commit -v"
 alias gc!="git commit -v --amend"
 alias gca="git commit -v -a"
 alias gca!="git commit -v -a --amend"
-alias gcl="git config --list"
 alias gclean="git clean -fd"
 alias gpristine="git reset --hard && git clean -dfx"
 alias gcm="git checkout master"
@@ -156,6 +164,66 @@ alias gvt="git verify-tag"
 alias gwch="git whatchanged -p --abbrev-commit --pretty = medium"
 alias h="cd ~"
 alias gtmp="git add . && git commit -m 'updTmp $RANDOM' && git push"
-export PATH="$PATH:$HOME/.rvm/bin"
+
+LS_COLORS=$(ls_colors_generator)
+
+export PATH="/home/juliano/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+run_ls() {
+	ls-i --color=auto -w $(tput cols) "$@"
+}
+
+run_dir() {
+	dir-i --color=auto -w $(tput cols) "$@"
+}
+
+run_vdir() {
+	vdir-i --color=auto -w $(tput cols) "$@"
+}
+alias ls="run_ls"
+alias dir="run_dir"
+alias vdir="run_vdir"
+
 # OPAM configuration
 . /home/juliano/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+export PATH="$PATH:/usr/share/texlive"
+
+function extract()      # Handy Extract Program
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1     ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1      ;;
+            *.rar)       unrar x $1      ;;
+            *.gz)        gunzip $1       ;;
+            *.tar)       tar xvf $1      ;;
+            *.tbz2)      tar xvjf $1     ;;
+            *.tgz)       tar xvzf $1     ;;
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
