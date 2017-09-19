@@ -41,7 +41,7 @@
   "custom-folds": {}
   editor:
     fontFamily: "monoki"
-    fontSize: 16
+    fontSize: 17
     preferredLineLength: 120
     scrollPastEnd: true
     showIndentGuide: true
