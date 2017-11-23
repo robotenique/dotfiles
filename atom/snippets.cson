@@ -34,17 +34,29 @@
   'Python self reference':
     'prefix': 'slef'
     'body':"self"
+  'Header comment for EP3':
+      'prefix': 'head'
+      'body':"""\"\"\"
+      @author: João Gabriel Basi Nº USP: 9793801
+      @author: Juliano Garcia de Oliveira Nº USP: 9277086
+
+      MAC0422
+      20/11/17
+
+      ${1:Summarized file description and objective}
+      \"\"\"
+      """
 
 '.source.c':
     'File Overview Documentation':
         'prefix': 'descr'
         'body': """
 /*
- * @author: João Gabriel
- * @author: Juliano Garcia
+ * @author: João Gabriel Basi Nº USP: 9793801
+ * @author: Juliano Garcia de Oliveira Nº USP: 9277086
  *
  * MAC0422
- * 11/09/17
+ * 16/10/17
  *
  * ${1:Summarized file description and objective}
  */"""

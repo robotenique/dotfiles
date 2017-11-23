@@ -14,8 +14,8 @@ fonts
 highlight-selected
 Hydrogen
 intentions
-language-haml
 language-latex
+language-prolog
 language-racket
 language-rust
 latex

@@ -71,8 +71,8 @@ fi
 source ~/.zprezto/modules/per-directory-history/per-directory-history.plugin.zsh
 export TERM="xterm-256color"
 export SUBLIME=subl
-export EDITOR="emacs"
-export VISUAL="emacs"
+export EDITOR="nano"
+export VISUAL="nano"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/juliano/bin:/home/juliano/.intellij/bin"
 export PATH="/home/juliano/anaconda3/bin:$PATH"
@@ -166,10 +166,6 @@ alias h="cd ~"
 alias gtmp="git add . && git commit -m 'updTmp $RANDOM' && git push"
 
 LS_COLORS=$(ls_colors_generator)
-
-export PATH="/home/juliano/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 
 run_ls() {

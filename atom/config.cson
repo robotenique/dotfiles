@@ -1,93 +1,31 @@
 "*":
   Hydrogen:
-    gateways: "[{\"name\":\"Primary Notebook\", \"options\":{\"baseUrl\": \"http://localhost:8888\"}}]"
-    languageMappings: "{\"python\": \"magicpython\"}"
-  "atom-clock":
-    locale: "br"
-  "atom-material-ui":
-    colors:
-      abaseColor: "#7e57c2"
-      accentColor: "#b0e457"
-      genAccent: true
-      paintCursor: true
-      predefinedColor: "Purple"
-    tabs:
-      compactTabs: true
-    treeView:
-      compactList: true
-    ui:
-      panelContrast: true
-  "atom-ternjs":
-    useSnippets: true
-  "autocomplete-python":
-    extraPaths: "/home/juliano/anaconda3/envs/simulation/lib/python3.6;/home/juliano/anaconda3/envs/simulation/lib/python3.6/site-packages/"
-    pythonPaths: "/home/juliano/anaconda3/bin/python;/usr/bin/python;/home/juliano/anaconda3/envs/simulation/bin/python"
-    useSnippets: "required"
-  "autocomplete-ruby":
-    suggestionPriority: true
+    languageMappings: "{\"python\" : \"magicpython\"}"
   core:
     autoHideMenuBar: true
     disabledPackages: [
-      "language-python"
-      "latex"
-      "autocomplete-ruby"
-      "rust-api-docs-helper"
+      "linter"
+      "linter-clang"
+      "linter-ui-default"
     ]
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "Chromodynamics"
     ]
-  "custom-folds": {}
   editor:
-    fontFamily: "monoki"
-    fontSize: 17
-    preferredLineLength: 120
+    fontSize: 16
     scrollPastEnd: true
-    showIndentGuide: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
     tabLength: 4
-    tabType: "soft"
   "exception-reporting":
-    userId: "c34476e7-76d9-1cca-8497-ec43e352f1ae"
-  "file-icons": {}
+    userId: "6a9330cd-c043-4817-b843-29652f846821"
   fonts:
     fontFamily: "FiraCode"
-  latextools:
-    builderSettings: {}
-    keepFocus: false
-    linux:
-      atomExecutable: "/usr/bin/atom"
-    viewer: "pdf-view"
-    win32:
-      distro: "texlive"
-  "linter-clang":
-    clangDefaultCFlags: "-Wall -std=gnu11"
-  "linter-pylint":
-    pythonPath: "/home/juliano/anaconda3/bin/python3.6"
-  "linter-ui-default":
-    showPanel: true
+  "linter-ui-default": {}
   minimap:
-    disablePythonDocLinks: true
     plugins:
       selection: true
       selectionDecorationsZIndex: 0
-  racer:
-    racerBinPath: "/home/juliano/.cargo/bin/racer"
-    rustSrcPath: "/home/juliano/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-  "seti-ui":
-    themeColor: "Purple"
-  "terminal-plus":
-    core:
-      autoRunCommand: "zsh"
-      mapTerminalsTo: "Folder"
-      shell: "/bin/bash"
-    style:
-      theme: "silver-aerogel"
-  "todo-show":
-    sortBy: "Type"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "todo-show": {}
   welcome:
     showOnStartup: false
