@@ -7,6 +7,8 @@
       "linter"
       "linter-clang"
       "linter-ui-default"
+      "rust-api-docs-helper"
+      "autocomplete-ruby"
     ]
     telemetryConsent: "no"
     themes: [
@@ -14,8 +16,10 @@
       "Chromodynamics"
     ]
   editor:
-    fontSize: 16
+    fontSize: 17
     scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
     tabLength: 4
   "exception-reporting":
     userId: "6a9330cd-c043-4817-b843-29652f846821"
