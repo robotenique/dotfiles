@@ -1,0 +1,28 @@
+
+ ------ GNOME EXTENSIONS ------
+
+---System-wide extensions (/usr/share/gnome-shell/extensions/)---
+
+alternate-tab@gnome-shell-extensions.gcampax.github.com
+apps-menu@gnome-shell-extensions.gcampax.github.com
+auto-move-windows@gnome-shell-extensions.gcampax.github.com
+drive-menu@gnome-shell-extensions.gcampax.github.com
+launch-new-instance@gnome-shell-extensions.gcampax.github.com
+native-window-placement@gnome-shell-extensions.gcampax.github.com
+places-menu@gnome-shell-extensions.gcampax.github.com
+screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com
+user-theme@gnome-shell-extensions.gcampax.github.com
+window-list@gnome-shell-extensions.gcampax.github.com
+windowsNavigator@gnome-shell-extensions.gcampax.github.com
+workspace-indicator@gnome-shell-extensions.gcampax.github.com
+
+---Local user extensions (~/.local/share/gnome-shell/extensions/)---
+
+CoverflowAltTab@palatis.blogspot.com
+dash-to-dock@micxgx.gmail.com
+drop-down-terminal@gs-extensions.zzrough.org
+dynamicTopBar@gnomeshell.feildel.fr
+hibernate-status@dromi
+impatience@gfxmonk.net
+suspend-button@laserb
+

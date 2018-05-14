@@ -31,3 +31,14 @@ cd ~/Documents/dotfiles
 # Apt packages
 apt list --installed > aptpackages.info 
 echo "Apt packages updated..."
+# Gnome packages
+LOCAL_GNOME=$(ls -b1 ~/.local/share/gnome-shell/extensions/)
+UNIVERSAL_GNOME=$(ls -b1 /usr/share/gnome-shell/extensions/)
+echo "" > gnomextensions.info
+echo " ------ GNOME EXTENSIONS ------\n" >> gnomextensions.info
+echo "---System-wide extensions (/usr/share/gnome-shell/extensions/)---\n" >> gnomextensions.info
+echo "$UNIVERSAL_GNOME\n" >> gnomextensions.info
+echo "---Local user extensions (~/.local/share/gnome-shell/extensions/)---\n" >> gnomextensions.info
+echo "$LOCAL_GNOME\n" >> gnomextensions.info
+echo "Gnome extensions list updated..."
+
