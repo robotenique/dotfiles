@@ -46,8 +46,7 @@
       ${1:Summarized file description and objective}
       \"\"\"
       """
-
-'.source.c':
+'.source.c, .source.cpp, .source.cu':
     'File Overview Documentation':
         'prefix': 'descr'
         'body': """
@@ -56,7 +55,6 @@
  * @author: Juliano Garcia de Oliveira Nº USP: 9277086
  *
  * MAC0219
- * 26/03/18
  *
  * ${1:Summarized file description and objective}
  */"""

@@ -26,6 +26,8 @@
   fonts:
     fontFamily: "FiraCode"
   "linter-ui-default": {}
+  "markdown-preview":
+    useGitHubStyle: true
   minimap:
     plugins:
       selection: true
@@ -33,3 +35,6 @@
   "todo-show": {}
   welcome:
     showOnStartup: false
+".cuda.source":
+  editor:
+    tabType: "soft"

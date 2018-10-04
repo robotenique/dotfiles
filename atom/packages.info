@@ -14,6 +14,7 @@ fonts
 highlight-selected
 Hydrogen
 intentions
+language-cuda
 language-latex
 language-prolog
 language-racket
