@@ -41,4 +41,6 @@ echo "$UNIVERSAL_GNOME\n" >> gnomextensions.info
 echo "---Local user extensions (~/.local/share/gnome-shell/extensions/)---\n" >> gnomextensions.info
 echo "$LOCAL_GNOME\n" >> gnomextensions.info
 echo "Gnome extensions list updated..."
-
+# Vivaldi Custom CSS
+/bin/cp /opt/vivaldi/resources/vivaldi/custom.css ./vivaldi
+echo "Vivaldi custom CSS updated..."

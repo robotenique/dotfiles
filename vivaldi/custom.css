@@ -1,0 +1,11 @@
+/* Remove Home button */
+.button-addressfield.home,.button-tabbar.home,.button-toolbar-small.home,.button-toolbar.home{display:none !important}
+
+/* Remove next and back history button */
+button.button-toolbar.back,
+button.button-toolbar.forward,
+button.button-toolbar.home,
+button.button-toolbar.reload {
+  display: none !important;
+}
+
