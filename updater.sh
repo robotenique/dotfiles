@@ -31,6 +31,8 @@ cd ~/Documents/dotfiles
 # Apt packages
 apt list --installed > aptpackages.info 
 echo "Apt packages updated..."
+/bin/cp ~/.ipython/profile_default/startup/import.py ~/Documents/dotfiles/ipython
+echo "Ipython/Anaconda configuration updated"
 # Gnome packages
 LOCAL_GNOME=$(ls -b1 ~/.local/share/gnome-shell/extensions/)
 UNIVERSAL_GNOME=$(ls -b1 /usr/share/gnome-shell/extensions/)
