@@ -1,0 +1,50 @@
+{
+    "window.zoomLevel": -1,
+    "workbench.statusBar.visible": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "explorer.sortOrder": "type",
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorBlinking": "smooth",
+    "files.trimFinalNewlines": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.renderIndentGuides": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 15,
+    "python.pythonPath": "/Users/juliano.garcia/miniconda3/bin/python",
+    // "python.pythonPath": "Users/juliano.garcia/miniconda3/envs/textrisk-nuds/bin/python",
+    "editor.fontFamily": "FiraCode-Retina",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [80,120],
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Args": [
+        "--max-line-length=120"
+    ],
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.autoUpdateLanguageServer": false,
+    "python.dataScience.allowInput": false,
+    "python.dataScience.allowImportFromNotebook": false,
+    "python.dataScience.allowLiveShare": false,
+    "python.dataScience.enabled": false,
+    "python.jediEnabled": true,
+    //"vscode_custom_css.imports": ["file:///Users/juliano.garcia/.zprezto/synthwave84.css"],
+    // "vscode_custom_css.imports": ["file:///Users/juliano.garcia/.zprezto/synthwave84-noglow.css"],
+    "vscode_custom_css.policy": false,
+    "[python]": {
+        
+    },
+    "workbench.colorTheme": "Chromodynamics",
+    // "workbench.colorTheme": "SynthWave '84",
+    
+}
