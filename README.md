@@ -17,6 +17,22 @@ The following scripts are **deprecated**:
 
 After a clean GNU/Linux install, here are some useful commands I have to do everytime.
 
+
+## Gnome Themes
+
+Given that you're using Gnome and have `gnome-tweaks` installed, I usually install the following themes:
+
+1. Sweet-Dark (theme)
+2. Sweet-Icons -> Sweet-Rainbow (Icon theme)
+3. Sweet-Cursor (Cursor Theme)
+
+You have to download all of them, extract them, then copy the folders to `/usr/share/themes/` or `/usr/share/icons/`. Then, you just need to change the Cursor and Icon theme files to inherit from the current Icon and Cursor themes you're using. For example in Manjaro Gnome the default Icon theme is `papirus-dark-maia`, so in the `index.theme` file inside the `Sweet-Rainbow` folder I add this theme as the first argument:
+
+```Inherits=papirus-dark-maia,candy-icons,breeze-dark,gnome,ubuntu-mono-dark,Mint-X,elementary,gnome,hicolor```
+
+Then just select these themes from inside `gnome-tweaks` (they should appear there).
+
+
 ## Python + Jupyter Notebook
 
 1. Install miniconda
