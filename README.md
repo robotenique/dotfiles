@@ -64,7 +64,7 @@ $ jupyter nbextension enable jupyter-black-master/jupyter-black
 
 ```bash
 $ pip install jupyterthemes
-$ jt -t grade3 -f roboto -fs 12 -kl -cellw 90% -T
+$ jt -t grade3 -f roboto -fs 11 -kl -cellw 90% -T
 ```
 
 9. Enable the following extensions:
