@@ -76,7 +76,8 @@ export VISUAL="nano"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/juliano/bin:/home/juliano/.intellij/bin:/home/juliano/Downloads/pycharm-2018.2.4/bin"
 export PATH="/home/juliano/anaconda3/bin:$PATH"
-alias cat='ccat'
+
+alias cat='bat'
 alias c='clear'
 alias up='cd ..'
 alias h='cd ~'
@@ -163,7 +164,6 @@ alias gunwip="git log -n 1 | grep -q -c "--wip--" && git reset HEAD~1"
 alias gup="git pull --rebase"
 alias gvt="git verify-tag"
 alias gwch="git whatchanged -p --abbrev-commit --pretty = medium"
-alias h="cd ~"
 alias gtmp="git add . && git commit -m 'updTmp $RANDOM' && git push"
 alias foaf="echo 'PREFIX foaf: <http://www.ime.usp.br/~renata/>'"
 alias arq="~/home/juliano/Downloads/apache-jena-3.5.0/bin/arq"
@@ -224,5 +224,3 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-
