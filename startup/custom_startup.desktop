@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=my-custom-startup
+GenericName=my-startup
+Comment=Startup script
+Exec='/home/lysanthir/.config/autostart/my-startup.sh'
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
