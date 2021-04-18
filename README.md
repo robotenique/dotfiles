@@ -75,3 +75,15 @@ $ jt -t grade3 -f roboto -fs 11 -kl -cellw 90% -T
 - Hide input all
 - Collapsible Headings
 - ExecuteTime
+
+## Linux Script autostart
+
+If using an [XDG Autostart](https://wiki.archlinux.org/index.php/XDG_Autostart) compatible distro, the startup files need to be placed at:
+
+`~/.config/autostart/`
+
+All the `.desktop` files inside this folder are automatically started at startup. This is where `gnome-tweaks` will save the configs for startup applications you manually add there. However, in the plugin you can only add already registered applications. To add a custom command/script you need to manually create a `.desktop` file.
+
+In the `startup/` folder of this repo there's a `.desktop` custom file that should be placed at `~/.config/autostart/`, and the `Exec` value should be changed accordingly depending on the username.
+
+Then all the `.sh` should be copied to this same folder so that the `.desktop` can find it easily and without changing `$PATH` variables and stuff like that.
